@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <button type="button" onclick="calproduto()">Comprar produto</button>
+    
+    <script>
+        function calproduto() {
+            var produto = window.prompt(`Que produto você está comprando?`)
+            var preco = window.prompt(`Quanto custa ${produto} que você está comprando?`)
+            var valor = window.prompt(`Qual foi o valor que você deu para pagar ${produto}?`)
+            
+            preco = Number(preco)
+            valor = Number(valor)
+            var cal = valor - preco
+
+            var preco2 = preco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            var valor2 = valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+            var cal2 = cal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+            window.alert(`Você comprou ${produto} que custou ${preco2}\nDeu ${valor2} em dinheiro e vai receber ${cal2} de troco.\nVolte Sempre!`)
+        }
+    </script>
+</body>
+</html>

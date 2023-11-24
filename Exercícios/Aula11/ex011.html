@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background: rgb(31, 31, 31);
+            font: normal 18pt Arial;
+            color: white;
+        }
+        #texto {
+            height: 20px;
+            width: 200px;
+            font-size: 16pt;
+        }
+        
+        #btn {
+            font: bold 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+        Em que país você vive? <input type="text" name="texto" id="texto">
+        <input type="button" value="Verificar" onclick="ver()" id="btn">
+    <div id="res"></div>
+    <script>
+        function ver() {
+        var pais = window.document.querySelector('input#texto').value
+        var res = window.document.querySelector('div#res')
+        res.innerHTML = `<p>Vivendo em <strong>${pais}!</strong></p>`
+        if (pais === 'Brasil') {
+            res.innerHTML += `<p>Você é <strong>BRASILEIRO!</strong></p>`
+        } else {
+            res.innerHTML += `<p>Você é <strong>ESTRANGEIRO!</strong></p>`
+        }
+    }
+    </script>
+</body>
+</html>
