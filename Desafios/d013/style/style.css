@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input#botao {
+    padding: 20px;
+}
+
+mark#aprovado {
+    background-color: lawngreen;
+    color: darkgreen;
+    font-weight: bolder;
+    padding: 2px;
+}
+
+mark#recuperacao {
+    background-color: rgba(255, 255, 0, 0.411);
+    color: orange;
+    font-weight: bolder;
+    padding: 2px;
+}
+
+mark#reprovado {
+    background-color: lightcoral;
+    color: darkred;
+    font-weight: bolder;
+    padding: 2px;
+}
